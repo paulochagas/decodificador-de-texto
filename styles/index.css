@@ -8,16 +8,22 @@
   height: 48px;
   overflow: hidden;
 }
+.digite-seu-texto:focus,
 .digite-seu-texto {
   margin: 0;
-  width: 680px;
+  width: 600px;
   font-size: inherit;
-  line-height: 150%;
+  /* outline: none;
+  resize: none; */
+  border-color: var(--light-blue-light-blue-100);
+  background-color: var(--light-blue-light-blue-100);
+  line-height: 200%;
   font-weight: 400;
   font-family: inherit;
   display: inline-block;
   max-width: 100%;
   cursor: pointer;
+
 }
 .digite-seu-texto-wrapper,
 .logo-parent {

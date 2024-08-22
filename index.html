@@ -21,11 +21,11 @@
             alt=""
             src="./assets/logo.svg"
           />
-
           <div class="digite-seu-texto-wrapper">
-            <h1 class="digite-seu-texto" id="digiteSeuTexto">
+            <textarea class="digite-seu-texto" placeholder="Digite seu texto..."></textarea>
+            <!-- <h1 class="digite-seu-texto" id="digiteSeuTexto">
               Digite seu texto
-            </h1>
+            </h1> -->
           </div>
         </header>
         <div class="side-layout">
@@ -35,7 +35,7 @@
                 class="biexclamation-circle-fill-icon"
                 loading="lazy"
                 alt=""
-                src="./public/biexclamationcirclefill.svg"
+                src="./assets/sinal-exclamacao.png"
               />
             </div>
             <div class="apenas-letras-minsculas">
@@ -90,14 +90,25 @@
         </div>
       </div>
     </div>
-
     <script>
+      /*
       var digiteSeuTexto = document.getElementById("digiteSeuTexto");
       if (digiteSeuTexto) {
         digiteSeuTexto.addEventListener("click", function (e) {
           // Please sync "Decodificador - 2 Desktop" to the project
         });
       }
+      */
+        const tx = document.getElementsByTagName("textarea");
+        for (let i = 0; i < tx.length; i++) {
+          tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+          tx[i].addEventListener("input", OnInput, false);
+        }
+
+        function OnInput() {
+          this.style.height = 'auto';
+          this.style.height = (this.scrollHeight) + "px";
+        }       
       </script>
   </body>
   <footer class="footer">
