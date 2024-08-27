@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    width: min-content;
+    height: 1024px;
+    margin: 40px auto;
+    background-color: #f3f5fc;
+  }
+  
+  #area-principal {
+    /* border: 1px solid red; */
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 60px;
+  }
+  
+  #dec {
+    /* border: 1px solid red; */
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    padding-top: 168px;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  
+  #dec textarea {
+    height: 100%;
+    font-size: 20px;
+    font-family: "Inter";
+    line-height: 30px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    color: #0a3871;
+  }
+  
+  #dec textarea::placeholder {
+    color: #0a3871;
+  }
+  
+  #dec textarea:focus {
+    outline: 0;
+  }
+  
+  #dec p {
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "Inter";
+    display: flex;
+    gap: 8px;
+    color: #495057;
+  }
+  
+  #dec p img {
+    height: 16px;
+  }
+  
+  #controls {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .btn1 {
+    border: none;
+    width: 328px;
+    height: 67px;
+    background-color: #0a3871;
+    color: white;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 16px;
+    line-height: 19.36px;
+    cursor: pointer;
+  }
+  
+  .btn2 {
+    border: none;
+    border: 1px solid #0a3871;
+    background-color: #d8dfe8;
+    width: 328px;
+    height: 67px;
+    color: #0a3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 16px;
+    line-height: 19.36px;
+    cursor: pointer;
+  }
+  
+  #btn3 {
+    border: none;
+    border: 1px solid #0a3871;
+    background-color: #ffffff;
+    width: 336px;
+    height: 67px;
+    color: #0a3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 16px;
+    line-height: 19.36px;
+    margin-bottom: 40px;
+    cursor: pointer;
+  }
+  
+  #out {
+    width: 400px;
+    height: 850px;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .justyfy-center {
+    justify-content: center;
+  }
+  
+  #out h2 {
+    font-size: 24px;
+    font-family: "Inter";
+    line-height: 28.8px;
+    text-align: center;
+    font-weight: 700;
+    width: 336px;
+    height: 58px;
+    color: #343a40;
+    margin: 0 auto;
+  }
+  
+  .div-resultado {
+    width: 336px;
+  }
+  
+  .div-resultado p {
+    font-size: 15px;
+    font-family: "Inter";
+    line-height: 30px;
+    text-align: start;
+    font-weight: 100;
+    height: 48px;
+    margin-top: 40px;
+    color: #495057;
+  }
+  
+  .paragrafo-tutorial {
+    font-size: 16px;
+    font-family: "Inter";
+    line-height: 24px;
+    text-align: center;
+    font-weight: 100;
+    height: 16px;
+    width: 336px;
+    color: #343a40;
+    color: #495057;
+  }
+  
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  header {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  
+  .oculto {
+    display: none;
+  }
+  
+  .box-aut {
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 1340px) {
+    #area-principal {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    #out {
+      width: 688px;
+      height: max-content;
+      /* border-radius: 32px;
+      box-shadow: 0px 24px 32px -8px #00000014;
+      background-color: white;
+      display: flex;
+      flex-direction: column; */
+      align-items: center;
+      justify-content: space-around;
+      padding: 40px 0;
+    }
+  
+    #out img {
+      display: none;
+    }
+  
+    #out h2 {
+      font-weight: 700;
+      width: 700px;
+      height: 29px;
+    }
+  
+    .paragrafo-tutorial {
+      height: 16px;
+      width: 700px;
+    }
+  
+    #dec {
+      padding-top: 150px;
+    }
+  
+    #dec textarea {
+      /* border: 1px solid red; */
+      height: 350px;
+    }
+  
+    #btn3 {
+      width: 624px;
+      margin: 0;
+    }
+  
+    .div-resultado {
+      width: 624px;
+    }
+  
+    .div-resultado p {
+      margin-top: 0px;
+      height: min-content;
+      margin-bottom: 35px;
+    }
+  }
+  
+  @media (max-width: 880px) {
+    #area-principal {
+      gap: 0px;
+    }
+  
+    #controls {
+      flex-direction: column;
+    }
+  
+    #out {
+      width: 327px;
+      padding: 40px 0;
+      /* height: max-content; */
+      /* border-radius: 32px;
+      box-shadow: 0px 24px 32px -8px #00000014;
+      background-color: white;
+      display: flex;
+      flex-direction: column; */
+      /* align-items: center;
+      justify-content: space-around;
+      padding: 40px 0; */
+    }
+  
+    #btn3 {
+      width: 279px;
+    }
+  
+    #out h2 {
+      font-weight: 700;
+      width: 263px;
+      height: 58px;
+    }
+  
+    .paragrafo-tutorial {
+      height: 48px;
+      width: 263px;
+    }
+  
+    header {
+      top: 24px;
+      left: -20px;
+    }
+  
+    .div-resultado {
+      width: 279px;
+    }
+  }

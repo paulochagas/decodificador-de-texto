@@ -1,117 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/css?family=Inter"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     />
+    <title>Decodificador de texto</title>
   </head>
   <body>
-    <div class="decodificador-1-desktop">
-      <section class="main-layout">
-        <header class="logo-parent">
-          <img
-            class="logo-icon"
-            loading="lazy"
-            alt=""
-            src="./assets/logo.svg"
-          />
-          <div class="digite-seu-texto-wrapper">
-            <textarea class="digite-seu-texto" placeholder="Digite seu texto..."></textarea>
-            <!-- <h1 class="digite-seu-texto" id="digiteSeuTexto">
-              Digite seu texto
-            </h1> -->
-          </div>
-        </header>
-        <div class="side-layout">
-          <div class="info-layout">
-            <div class="warning-layout">
-              <img
-                class="biexclamation-circle-fill-icon"
-                loading="lazy"
-                alt=""
-                src="./assets/sinal-exclamacao.png"
-              />
-            </div>
-            <div class="apenas-letras-minsculas">
-              Apenas letras minúsculas e sem acento.
-            </div>
-          </div>
-          <div class="actions-layout">
-            <button class="button">
-              <div class="button1">Criptografar</div>
-            </button>
-            <button class="button2">
-              <div class="button3">Descriptografar</div>
-            </button>
-          </div>
+    <header><img src="./assets/logo.svg" alt="" /></header>
+    <main id="area-principal">
+      <section id="dec">
+        <textarea
+          name=""
+          id="valor-texto"
+          placeholder="Digite seu texto"
+        ></textarea>
+        <p>
+          <img src="./assets/sinal-exclamacao.png" alt="" />
+          Apenas letras minúsculas e sem acento.
+        </p>
+        <div id="controls">
+          <button id="btn1" class="btn1">Criptografar</button>
+          <button id="btn2" class="btn2">Descriptografar</button>
         </div>
       </section>
-      <div class="message-layout">
-        <div class="message-layout-child"></div>
-        <img
-          class="high-quality-products-1-1"
-          loading="lazy"
-          alt=""
-          src="./assets/imagem_lateral.png"
-        />
-
-        <div class="nenhuma-mensagem-encontrada-parent">
-          <h3 class="nenhuma-mensagem-encontrada">
-            Nenhuma mensagem encontrada
-          </h3>
-          <div class="digite-um-texto">
-            Digite um texto que você deseja criptografar ou descriptografar.
-          </div>
+      <section id="out" class="justyfy-center">
+        <img class="grupo1" src="./assets/garota.svg" alt="" />
+        <div class="grupo1" class="infos">
+          <h2>Nenhuma mensagem encontrada</h2>
+          <p class="paragrafo-tutorial">
+            Digite um texto que você deseja criptografar ou descriptografar
+          </p>
         </div>
-      </div>
-      <div class="menu">
-        <div class="list">
-          <img class="page-icon" alt="" src="./public/page-icon.svg" />
-
-          <img class="page-icon1" alt="" src="./public/page-icon-1.svg" />
+        <div class="div-resultado oculto">
+          <p id="resultado"></p>
         </div>
-      </div>
-      <div class="menu1">
-        <div class="list1">
-          <div class="page-icon2">
-            <div class="page-icon-child"></div>
-            <div class="pt">PT</div>
-          </div>
-          <div class="page-icon3">
-            <div class="page-icon-item"></div>
-            <div class="es">ES</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      /*
-      var digiteSeuTexto = document.getElementById("digiteSeuTexto");
-      if (digiteSeuTexto) {
-        digiteSeuTexto.addEventListener("click", function (e) {
-          // Please sync "Decodificador - 2 Desktop" to the project
-        });
-      }
-      */
-        const tx = document.getElementsByTagName("textarea");
-        for (let i = 0; i < tx.length; i++) {
-          tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
-          tx[i].addEventListener("input", OnInput, false);
-        }
-
-        function OnInput() {
-          this.style.height = 'auto';
-          this.style.height = (this.scrollHeight) + "px";
-        }       
-      </script>
+        <button class="oculto" id="btn3" onclick="copiar()">Copiar</button>
+      </section>
+    </main>
   </body>
-  <footer class="footer">
-    <p>Desenvolvido por Paulo Chagas</p>
-  </footer>
+  <script src="./script.js"></script>
 </html>
